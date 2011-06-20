@@ -1,0 +1,3 @@
+[submodule "src/Zenstruck/Bundle/CMSBundle"]
+	path = src/Zenstruck/Bundle/CMSBundle
+	url = git@github.com:kbond/CMSBundle.git
