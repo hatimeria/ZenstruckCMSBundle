@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @author Kevin Bond <kevinbond@gmail.com>
  *
  * @ORM\Entity
+ * @ORM\Table(name="blog_post")
  */
 class BlogPost extends Page
 {

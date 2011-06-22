@@ -4,16 +4,17 @@ namespace Zenstruck\ApplicationBundle\DataFixtures\ORM;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Zenstruck\ApplicationBundle\Entity\BlogPost;
 use Zenstruck\ApplicationBundle\Entity\Page;
+use Zenstruck\Bundle\CMSBundle\Entity\Path;
 
 class FixtureLoader implements FixtureInterface
 {
 
     public function load($manager)
     {
-
         $post1 = new BlogPost();
         $post1->setTitle('Post 1');
         $post1->setBody('Post 1 body');
+        $post1->setPrimaryPath(new Path('path/to/blog/post/1'));
         $manager->persist($post1);
 
         $post2 = new BlogPost();

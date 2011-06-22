@@ -9,6 +9,7 @@ use Zenstruck\Bundle\CMSBundle\Entity\Node;
  * @author Kevin Bond <kevinbond@gmail.com>
  *
  * @ORM\Entity
+ * @ORM\Table(name="page")
  */
 class Page extends Node
 {
