@@ -2,21 +2,22 @@
 
 namespace Zenstruck\ApplicationBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
 use Zenstruck\Bundle\CMSBundle\Entity\Node;
 
 /**
  * @author Kevin Bond <kevinbond@gmail.com>
- * 
- * @orm:Entity
+ *
+ * @ORM\Entity
  */
 class Page extends Node
 {
     /**
-     * @orm:Column(type="text", nullable=true)
-     */  
+     * @ORM\Column(type="text", nullable=true)
+     */
     protected $body;
-    
-    public function getBody()     
+
+    public function getBody()
     {
         return $this->body;
     }

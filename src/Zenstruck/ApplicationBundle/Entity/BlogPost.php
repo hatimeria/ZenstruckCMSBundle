@@ -2,19 +2,21 @@
 
 namespace Zenstruck\ApplicationBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * @author Kevin Bond <kevinbond@gmail.com>
- * 
- * @orm:Entity
+ *
+ * @ORM\Entity
  */
 class BlogPost extends Page
 {
     /**
-     * @orm:Column(type="string", nullable=true)
-     */ 
+     * @ORM\Column(type="string", nullable=true)
+     */
     protected $tags;
-    
-    public function getTags()     
+
+    public function getTags()
     {
         return $this->tags;
     }

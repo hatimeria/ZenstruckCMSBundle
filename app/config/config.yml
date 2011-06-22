@@ -2,6 +2,11 @@ imports:
     - { resource: parameters.ini }
     - { resource: security.yml }
 
+zenstruck_cms:
+    content_types:
+        page: Zenstruck\ApplicationBundle\Entity\Page
+        blog_post: Zenstruck\ApplicationBundle\Entity\BlogPost
+
 framework:
     secret:          %secret%
     charset:         UTF-8
@@ -42,7 +47,10 @@ doctrine:
 
     orm:
         auto_generate_proxy_classes: %kernel.debug%
-        auto_mapping: true
+        #auto_mapping: true
+        mappings:
+            ApplicationBundle: ~
+            ZenstruckCMSBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
