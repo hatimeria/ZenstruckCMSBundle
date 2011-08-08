@@ -2,6 +2,8 @@
 
 namespace Zenstruck\Bundle\CMSBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -15,6 +17,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Node extends Entity
 {
     /**
+     * @Assert\NotBlank()
      * @ORM\Column(type="string")
      */
     protected $title;
