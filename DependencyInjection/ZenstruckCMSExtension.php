@@ -19,7 +19,9 @@ class ZenstruckCMSExtension extends Extension
         
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('listener.xml');
-        
+        $loader->load('form.xml');
+        $loader->load('validator.xml');
+
         // get content types defined in config
         $content_types = array_flip($config['content_types']);
         $content_types[$config['node_class']] = 'node';        
